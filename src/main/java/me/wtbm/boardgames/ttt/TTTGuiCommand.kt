@@ -20,7 +20,7 @@ object TTTGuiCommand : CommandExecutor {
             sender.sendMessage("only a player can run this command")
             return true
         }
-        if (args.size < 1) {
+        if (args.isEmpty()) {
             sender.sendMessage("specify what you want to do")
             return true
         }

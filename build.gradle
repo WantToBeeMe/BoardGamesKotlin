@@ -1,7 +1,7 @@
 plugins {
     id 'java'
-    id 'org.jetbrains.kotlin.jvm' version '1.8.0-RC2'
-    id "org.jetbrains.kotlin.kapt" version "1.7.10"
+    id 'org.jetbrains.kotlin.jvm' version '1.8.0-RC2' //kotlin!!
+    id "org.jetbrains.kotlin.kapt" version "1.7.10" //kotlin!!
 }
 
 group = 'me.wtbm'
@@ -21,9 +21,9 @@ repositories {
 
 dependencies {
     compileOnly 'org.spigotmc:spigot-api:1.19.2-R0.1-SNAPSHOT'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.22"
-    compileOnly 'org.spigotmc:plugin-annotations:1.2.3-SNAPSHOT'
-    kapt 'org.spigotmc:plugin-annotations:1.2.3-SNAPSHOT'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.22" //kotlin!!
+    compileOnly 'org.spigotmc:plugin-annotations:1.2.3-SNAPSHOT' //annotations!!
+    kapt 'org.spigotmc:plugin-annotations:1.2.3-SNAPSHOT' //annotations!!
 }
 
 def targetJavaVersion = 17

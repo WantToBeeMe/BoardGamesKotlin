@@ -5,6 +5,7 @@ import org.bukkit.Bukkit
 import org.bukkit.event.EventHandler
 import org.bukkit.event.EventPriority
 import org.bukkit.event.Listener
+
 import org.bukkit.event.inventory.InventoryClickEvent
 
 import me.wtbm.boardgames.ttt.TTTGuiController.refreshGUI
@@ -16,10 +17,9 @@ import me.wtbm.boardgames.ttt.TTTGuiController.refreshGUIForPlayer
 import org.bukkit.entity.Player
 import java.util.*
 
-class TTTGuiListener(val plugin: BoardGames) : Listener {
-    init{ Bukkit.getPluginManager().registerEvents( this, plugin) }
+object TTTGuiListener : Listener {
 
-    @EventHandler(priority = EventPriority.NORMAL) // i know, normal is default, but its just there so i dont forget it exist in case i need a lower or higher one
+    @EventHandler(priority = EventPriority.NORMAL) // I know, normal is default, but It's just there, so I don't forget it exists in case I need a lower or higher one
     fun invClick(event: InventoryClickEvent) {
         val p = event.whoClicked as Player
         if(event.view.topInventory == event.clickedInventory) {
